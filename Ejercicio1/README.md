@@ -17,3 +17,6 @@ el método wait() suspende el thread y temporalmente libera el "lock" obtenido p
 el método notify() despierta un thread que este esperando el "lock" del objeto cualquier "thread" que esté esperando obtener el "lock" del objeto desde el que se llama.
 
 Para solucionar el problema deberás utilizar estos métodos en los métodos get() y set() de la clase Buffer.
+
+Para ello el productor deberá esperar cuando ya no pueda llenar más el buffer y deberá notificar al consumidor después de añadir un nuevo elemento en el buffer.
+Por el otro lado el consumidor deberá esperar cuando el buffer esté vacío y deberá notificar al productor después de consumir un elemento del buffer.
