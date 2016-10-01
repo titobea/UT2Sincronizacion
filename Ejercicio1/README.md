@@ -4,9 +4,10 @@ Ejercicio1
 En este ejemplo incorrecto de productor/consumidor, el thread productor rápidamente llena el buffer con caracteres y entonces espera de forma activa al consumidor para que consuma algunos caracteres del buffer. El problema es que el productor espera dentro del monitor asociado con el buffer, evitando que el consumidor ejecute el método synchronized "get" en el buffer.
 
 Ejecuta el código y observa como el productor se bloquea en una espera activa consumiendo ciclos de CPU a cascoporro en la llamada a buffer.put():
-...
+
+```java
 while(count == buffer.length) ;
-...
+```
 
 Mientras tanto el thread consumidor no puede entrar en el método buffer.get() por estar el monitor del objeto Buffer ocupado por el thread productor.
 

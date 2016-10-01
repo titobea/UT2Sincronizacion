@@ -5,21 +5,21 @@ En este caso tenemos un thread que está pendiente de que cambie la variable kee
 
 Sin embargo debido a optimizaciones que realiza la JVM el código:
 
-'''java
+```java
 while (keepRunning) {
             count++;
 }
-'''
+```
 
 se ha tranforma internamente a:
 
-'''java
+```java
 if (keepRunning) {
 	for(;;) {
 		count++
 	}
 }
-'''
+```
 
 que en un programa secuencial sería equivalente, pero no lo es en un programa multithread.
 
