@@ -1,9 +1,9 @@
 Ejercicio 3
 ===========
-Tenemos el siguiente programa que gestiona una cafeterÃ­a. Los clientes (Client, clase Runnable) acceden concurrentemente a la cafeterÃ­a (CoffeeStore) y compran cafÃ©, se lo toman y se van.
+Tenemos el siguiente programa que gestiona una cafetería. Los clientes (Client, clase Runnable) acceden concurrentemente a la cafetería (CoffeeStore) y compran café, se lo toman y se van.
 
-En la clase CoffeeStore llevamos la cuenta del nÃºmero de cafÃ©s vendidos (variable soldCoffees).
+En la clase CoffeeStore llevamos la cuenta del número de cafés vendidos (variable soldCoffees).
 
-En el ejemplo 4 clientes entran a la vez y toman cafÃ©. Sin embargo, si ejecutas varias veces el programa te darÃ¡s cuenta que a veces la cuenta falla (a veces salen 3 cafes).
+En el ejemplo, 4 clientes entran a la vez y toman café. Sin embargo, si ejecutas varias veces el programa te darás cuenta que a veces la cuenta falla (a veces salen 3 cafes).
 
-Arregla el programa mediante algÃºn mecanismo de sincronizaciÃ³n de los vistos en clase.
+Arregla el programa mediante algún mecanismo de sincronización de los vistos en clase.

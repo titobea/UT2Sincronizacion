@@ -7,7 +7,7 @@ public class CoffeeStore {
 	        Thread.sleep(3000);
 	    }
 	     
-	    public void buyCoffee(String client) throws InterruptedException {
+	    public synchronized void buyCoffee(String client) throws InterruptedException {
 	        someLongRunningProcess();
 	        lastClient = client;
 	        soldCoffees++;
